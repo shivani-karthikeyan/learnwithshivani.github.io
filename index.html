@@ -34,6 +34,8 @@ svg text{fill:var(--ink);font-family:"Segoe UI",system-ui,sans-serif}
 .lg .g b{color:var(--ink)}
 .ex{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 6px;font-size:14px}
 .ex .code{font-size:18px;font-weight:700;letter-spacing:.06em}
+.sl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:8px 0 2px}.pl{margin:0;padding-left:18px}.pl li{margin:5px 0;font-size:14px}
+.tb{width:100%;border-collapse:collapse;font-size:14px}.tb th,.tb td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
 .note{font-size:13px;color:var(--mute);margin-top:10px}
 </style>
 </head>
@@ -48,7 +50,7 @@ svg text{fill:var(--ink);font-family:"Segoe UI",system-ui,sans-serif}
 <script>
 var C=[
 {id:"health",n:"Health & Medicine",c:"#c0392b",sub:"MD, Nursing, Pharmacy, Rehab",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W FSF1D".split(" "),10:"ENG2D MPM2D SNC2D CHC2D GLC2O".split(" "),11:"ENG3U MCR3U SBI3U SCH3U SPH3U".split(" "),12:"ENG4U SBI4U SCH4U MHF4U MCV4U PSK4U".split(" ")},t:[80,85,90,92],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCR3U SBI3U SCH3U SPH3U".split(" "),12:"ENG4U SBI4U SCH4U MHF4U MCV4U PSK4U".split(" ")},o:{9:"BTT1O".split(" "),10:"PPL2O ICS2O BBI2O".split(" "),11:"HSP3U PPL3O ICS3U".split(" "),12:"SPH4U MDM4U".split(" ")},t:[80,85,90,92],
 tip:"Medicine and most health programs need Biology and Chemistry at 4U; Physics and Calculus help for Kinesiology and Medical Sciences.",
 car:[
 {n:"Family Physician",r:[["Undergrad","BSc: Life Sci, Health Sci, Kin","4 yrs"],["Admission","MCAT plus GPA, experience","Prep 1 yr"],["Medical school","MD","3-4 yrs"],["Residency","Family Medicine","2 yrs"],["Licence","MCC exams, CPSO","Practice"]]},
@@ -58,7 +60,7 @@ car:[
 {n:"Physiotherapist / OT",r:[["Undergrad","BKin, BHSc, BSc","4 yrs"],["Graduate","MScPT or MScOT","2 yrs"],["Licence","CPO or COTO","Practice"]]},
 {n:"Kinesiologist",r:[["Undergrad","BKin or BSc Kinesiology","4 yrs"],["Licence","College of Kinesiologists of Ontario","Register"]]}]},
 {id:"eng",n:"Engineering",c:"#d68910",sub:"Civil, Mechanical, Electrical, Chemical",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W TIJ1O".split(" "),10:"ENG2D MPM2D SNC2D CHC2D TDJ2O".split(" "),11:"ENG3U MCR3U SPH3U SCH3U ICS3U".split(" "),12:"ENG4U MHF4U MCV4U SPH4U SCH4U ICS4U".split(" ")},t:[80,85,90,93],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCR3U SPH3U SCH3U ICS3U".split(" "),12:"ENG4U MHF4U MCV4U SPH4U SCH4U ICS4U".split(" ")},o:{9:"TIJ1O".split(" "),10:"TDJ2O ICS2O PPL2O".split(" "),11:"TEJ3M TDJ3M PPL3O".split(" "),12:"MDM4U TEJ4M".split(" ")},t:[80,85,90,93],
 tip:"Nearly every engineering program requires ENG4U, MHF4U, MCV4U, Physics and Chemistry at 4U. Co-op programs add work terms.",
 car:[
 {n:"Civil Engineer",r:[["Undergrad","BEng or BASc Civil","4-5 yrs (co-op)"],["EIT","Engineer-in-Training","Grad"],["Experience","4 years supervised work","4 yrs"],["Licence","P.Eng through PEO","Practice"]]},
@@ -67,7 +69,7 @@ car:[
 {n:"Chemical Engineer",r:[["Undergrad","BEng or BASc Chemical","4-5 yrs"],["Experience","4 years supervised","4 yrs"],["Licence","P.Eng","Practice"]]},
 {n:"Engineering Technologist",r:[["College","Advanced Diploma, Eng. Technology","3 yrs"],["Certification","OACETT (C.E.T.)","Register"]]}]},
 {id:"cs",n:"Computer Science & IT",c:"#2471a3",sub:"Software, Data, Cloud, Security, AI",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W BTT1O".split(" "),10:"ENG2D MPM2D SNC2D CHC2D ICS2O".split(" "),11:"ENG3U MCR3U ICS3U SPH3U".split(" "),12:"ENG4U MHF4U MCV4U MDM4U ICS4U".split(" ")},t:[80,85,90,94],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCR3U ICS3U SPH3U".split(" "),12:"ENG4U MHF4U MCV4U MDM4U ICS4U".split(" ")},o:{9:"BTT1O".split(" "),10:"ICS2O BBI2O PPL2O".split(" "),11:"SCH3U TEJ3M PPL3O ICD3O".split(" "),12:"SPH4U SCH4U TEJ4M".split(" ")},t:[80,85,90,94],
 tip:"Math (MHF4U, MCV4U) is the gatekeeper for CS and AI degrees. MDM4U helps for data science and statistics.",
 car:[
 {n:"Software Developer",r:[["Undergrad","BCS, BSc CS or BMath","4-5 yrs (co-op)"],["Or college","Diploma in Software Dev","2-3 yrs"],["Career","Junior developer, then senior","Ongoing"]]},
@@ -76,7 +78,7 @@ car:[
 {n:"Cybersecurity Analyst",r:[["Undergrad","BSc CS or Info Security","4 yrs"],["Certifications","Security+, CISSP (after experience)","Ongoing"],["Career","SOC analyst, then security architect","Ongoing"]]},
 {n:"Business / Systems Analyst",r:[["Undergrad","BCom (MIS) or BSc IT","4 yrs"],["Certification","CBAP (optional)","Ongoing"]]}]},
 {id:"biz",n:"Business & Finance",c:"#1e8449",sub:"Accounting, Finance, Marketing, HR",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W BBI1O".split(" "),10:"ENG2D MPM2D SNC2D CHC2D BBI2O".split(" "),11:"ENG3U MCR3U BAF3M BMI3C CIE3M".split(" "),12:"ENG4U MHF4U MCV4U BOH4M BBB4M CIA4U".split(" ")},t:[80,85,88,90],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCR3U BAF3M BMI3C CIE3M".split(" "),12:"ENG4U MHF4U MCV4U BOH4M BBB4M CIA4U".split(" ")},o:{9:"BBI1O".split(" "),10:"BBI2O ICS2O PPL2O".split(" "),11:"ICS3U PPL3O CLU3M".split(" "),12:"MDM4U BAF4M".split(" ")},t:[80,85,88,90],
 tip:"Most BCom programs require ENG4U plus one Grade 12 math (MHF4U or MCV4U; MDM4U is sometimes accepted). Top programs weigh math heavily.",
 car:[
 {n:"Chartered Accountant (CPA)",r:[["Undergrad","BCom or BBA (accounting)","4 yrs"],["Program","CPA PREP","~1 yr"],["Exam + work","CFE plus practical experience","~30 months"],["Designation","CPA Ontario","Practice"]]},
@@ -86,7 +88,7 @@ car:[
 {n:"Project Manager",r:[["Undergrad","Any degree, business or tech","3-4 yrs"],["Certification","PMP after experience","Ongoing"]]},
 {n:"Actuary",r:[["Undergrad","BSc Actuarial Science or Math","4 yrs"],["Exams","SOA or CAS exams","3-7 yrs"]]}]},
 {id:"law",n:"Law, Justice & Public Service",c:"#5b3f8c",sub:"Lawyer, Police, Policy, Security",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W FSF1D".split(" "),10:"ENG2D MPM2D SNC2D CHC2D CHV2O".split(" "),11:"ENG3U CLU3M CHW3M MCF3M".split(" "),12:"ENG4U CLN4U CPW4U CHY4U HSB4U".split(" ")},t:[80,83,86,88],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U CLU3M CHW3M MCF3M".split(" "),12:"ENG4U CLN4U CPW4U CHY4U HSB4U".split(" ")},o:{9:"ADA1O".split(" "),10:"ADA2O BBI2O PPL2O".split(" "),11:"HSP3U SBI3U ADA3M PPL3O".split(" "),12:"MDM4U HZT4U ADA4M".split(" ")},t:[80,83,86,88],
 tip:"Law schools accept any undergraduate major. Grades and the LSAT decide admission, so choose a subject where you can earn top marks.",
 car:[
 {n:"Lawyer",r:[["Undergrad","BA (any major)","3-4 yrs"],["Admission","LSAT","Prep"],["Law school","JD","3 yrs"],["Licensing","LSO bar exams, articling or LPP","~10 months"]]},
@@ -96,7 +98,7 @@ car:[
 {n:"Policy Analyst",r:[["Undergrad","BA Political Science, Public Policy","4 yrs"],["Graduate","MPA or MA (common)","1-2 yrs"]]},
 {n:"Crime / Intelligence Analyst",r:[["Undergrad","BA Criminology or Forensic Science","4 yrs"],["Optional","Grad certificate or MA","1 yr"]]}]},
 {id:"edu",n:"Education & Social Services",c:"#148f77",sub:"Teacher, ECE, Social Work, SLP",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W FSF1D".split(" "),10:"ENG2D MPM2D SNC2D CHC2D CHV2O".split(" "),11:"ENG3U MCF3M HSP3U SBI3U".split(" "),12:"ENG4U HHS4U HSB4U SBI4U MDM4U".split(" ")},t:[75,80,83,85],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCF3M HSP3U SBI3U".split(" "),12:"ENG4U HHS4U HSB4U SBI4U MDM4U".split(" ")},o:{9:"AMU1O".split(" "),10:"PPL2O AMU2O ICS2O".split(" "),11:"HPC3O AMU3M PPL3O CLU3M".split(" "),12:"HZT4U AMU4M PPL4O".split(" ")},t:[75,80,83,85],
 tip:"Teaching is consecutive: a 3-4 year degree first, then a 2-year BEd. Choose teachable subjects (two are needed for Intermediate/Senior).",
 car:[
 {n:"Teacher (K-12)",r:[["Undergrad","BA or BSc, teachable subjects","3-4 yrs"],["Teacher education","BEd (consecutive)","2 yrs"],["Licence","Ontario College of Teachers","Register"]]},
@@ -105,7 +107,7 @@ car:[
 {n:"Speech-Language Pathologist",r:[["Undergrad","BSc, Health Sci or Linguistics","4 yrs"],["Graduate","MSc SLP","2 yrs"],["Licence","CASLPO","Register"]]},
 {n:"Child & Youth Worker",r:[["College","CYW diploma","2-3 yrs"],["Career","Group homes, schools, agencies","Ongoing"]]}]},
 {id:"psy",n:"Psychology & Mental Health",c:"#a93a76",sub:"Psychologist, Therapist, Neuroscience",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W FSF1D".split(" "),10:"ENG2D MPM2D SNC2D CHC2D".split(" "),11:"ENG3U MCR3U SBI3U HSP3U".split(" "),12:"ENG4U SBI4U MDM4U MHF4U HSB4U".split(" ")},t:[80,83,86,88],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCR3U SBI3U HSP3U".split(" "),12:"ENG4U SBI4U MDM4U MHF4U HSB4U".split(" ")},o:{9:"ADA1O".split(" "),10:"PPL2O ADA2O BBI2O".split(" "),11:"SCH3U PPL3O ADA3M ICS3U".split(" "),12:"SCH4U HZT4U PPL4O".split(" ")},t:[80,83,86,88],
 tip:"Psychology is a BA or BSc at university. Statistics (MDM4U) and Biology are the most useful prep, and graduate admission is very competitive.",
 car:[
 {n:"Psychologist",r:[["Undergrad","BA or BSc Psychology","4 yrs"],["Graduate","MA or MSc, then PhD or PsyD","4-7 yrs"],["Supervised practice","Plus registration exams","1 yr+"],["Licence","College of Psychologists of Ontario","Register"]]},
@@ -114,7 +116,7 @@ car:[
 {n:"Neuroscientist",r:[["Undergrad","BSc Neuroscience or Life Sci","4 yrs"],["Graduate","MSc then PhD","5-7 yrs"]]},
 {n:"Mental Health Worker",r:[["College","Social Service Worker or Mental Health diploma","2 yrs"],["Or degree","BA Psychology","4 yrs"]]}]},
 {id:"media",n:"Communications & Media",c:"#c2410c",sub:"Journalism, PR, Design, Content",
-hs:{9:"ENG1W MTH1W SNC1W CGC1W AVI1O".split(" "),10:"ENG2D MPM2D SNC2D CHC2D EMS2O".split(" "),11:"ENG3U EMS3O BMI3C ICD3O".split(" "),12:"ENG4U EWC4U ASM4M AWM4M BOH4M".split(" ")},t:[75,80,83,85],
+hs:{9:"ENG1W MTH1W SNC1W".split(" "),10:"ENG2D MPM2D SNC2D".split(" "),11:"ENG3U MCF3M EMS3O BMI3C ICD3O".split(" "),12:"ENG4U EWC4U ASM4M AWM4M BOH4M".split(" ")},o:{9:"BTT1O".split(" "),10:"EMS2O AVI2O ADA2O".split(" "),11:"AVI3M ADA3M PPL3O".split(" "),12:"EMS4O ADA4M PPL4O".split(" ")},t:[75,80,83,85],
 tip:"A portfolio or work samples often matter as much as grades. Co-op and internships are the strongest signal for these fields.",
 car:[
 {n:"Journalist",r:[["Undergrad","BA Journalism (or BA + college post-grad)","4 yrs"],["Career","Reporter, producer, editor","Ongoing"]]},
@@ -123,7 +125,7 @@ car:[
 {n:"Graphic / Digital Designer",r:[["College or degree","Graphic Design diploma or BDes","2-4 yrs"],["Portfolio","Required for hiring","Ongoing"]]},
 {n:"Video / Content Producer",r:[["College or degree","Media Production or Digital Media","2-4 yrs"],["Portfolio","Reel and published work","Ongoing"]]}]}
 ];
-var K={ENG1W:"English",ENG2D:"English",ENG3U:"English",ENG4U:"English",MTH1W:"Mathematics",MPM2D:"Principles of Math",MCR3U:"Functions",MCF3M:"Functions & Applications",MHF4U:"Advanced Functions",MCV4U:"Calculus & Vectors",MDM4U:"Data Management (Statistics)",SNC1W:"Science",SNC2D:"Science",SBI3U:"Biology",SBI4U:"Biology",SCH3U:"Chemistry",SCH4U:"Chemistry",SPH3U:"Physics",SPH4U:"Physics",CGC1W:"Canadian Geography",CHC2D:"Canadian History",FSF1D:"Core French",GLC2O:"Career Studies",CHV2O:"Civics & Citizenship",PSK4U:"Exercise Science",TIJ1O:"Exploring Technologies",TDJ2O:"Technological Design",BTT1O:"Information & Communication Tech",ICS2O:"Intro to Computer Science",ICS3U:"Computer Science",ICS4U:"Computer Science",BBI1O:"Intro to Business",BBI2O:"Intro to Business",BAF3M:"Financial Accounting",BMI3C:"Marketing",CIE3M:"Economics (Individual & Economy)",CIA4U:"Analysing Current Economic Issues",BOH4M:"Business Leadership",BBB4M:"International Business",CLU3M:"Understanding Canadian Law",CHW3M:"World History to 1900s",CLN4U:"Canadian & International Law",CPW4U:"Canadian & World Politics",CHY4U:"World History Since 1900",HSB4U:"Challenge & Change in Society",HSP3U:"Intro to Anthropology, Psychology & Sociology",HHS4U:"Families in Canada",AVI1O:"Visual Arts",EMS2O:"Media Studies",EMS3O:"Media Studies",ICD3O:"Digital Technology & Innovation",ASM4M:"Media Arts",AWM4M:"Visual Arts",EWC4U:"The Writer\'s Craft"};
+var K={PPL1O:"Healthy Active Living (Phys Ed)",PPL2O:"Healthy Active Living (Phys Ed)",PPL3O:"Healthy Active Living (Phys Ed)",PPL4O:"Healthy Active Living (Phys Ed)",ADA1O:"Drama",ADA2O:"Drama",ADA3M:"Drama",ADA4M:"Drama",AMU1O:"Music",AMU2O:"Music",AMU3M:"Music",AMU4M:"Music",AVI2O:"Visual Arts",AVI3M:"Visual Arts",TEJ3M:"Computer Engineering Technology",TEJ4M:"Computer Engineering Technology",TDJ3M:"Technological Design",HPC3O:"Raising Healthy Children",BAF4M:"Financial Accounting Principles",HZT4U:"Philosophy",EMS4O:"Media Studies",ENG1W:"English",ENG2D:"English",ENG3U:"English",ENG4U:"English",MTH1W:"Mathematics",MPM2D:"Principles of Math",MCR3U:"Functions",MCF3M:"Functions & Applications",MHF4U:"Advanced Functions",MCV4U:"Calculus & Vectors",MDM4U:"Data Management (Statistics)",SNC1W:"Science",SNC2D:"Science",SBI3U:"Biology",SBI4U:"Biology",SCH3U:"Chemistry",SCH4U:"Chemistry",SPH3U:"Physics",SPH4U:"Physics",CGC1W:"Canadian Geography",CHC2D:"Canadian History",FSF1D:"Core French",GLC2O:"Career Studies",CHV2O:"Civics & Citizenship",PSK4U:"Exercise Science",TIJ1O:"Exploring Technologies",TDJ2O:"Technological Design",BTT1O:"Information & Communication Tech",ICS2O:"Intro to Computer Science",ICS3U:"Computer Science",ICS4U:"Computer Science",BBI1O:"Intro to Business",BBI2O:"Intro to Business",BAF3M:"Financial Accounting",BMI3C:"Marketing",CIE3M:"Economics (Individual & Economy)",CIA4U:"Analysing Current Economic Issues",BOH4M:"Business Leadership",BBB4M:"International Business",CLU3M:"Understanding Canadian Law",CHW3M:"World History to 1900s",CLN4U:"Canadian & International Law",CPW4U:"Canadian & World Politics",CHY4U:"World History Since 1900",HSB4U:"Challenge & Change in Society",HSP3U:"Intro to Anthropology, Psychology & Sociology",HHS4U:"Families in Canada",AVI1O:"Visual Arts",EMS2O:"Media Studies",EMS3O:"Media Studies",ICD3O:"Digital Technology & Innovation",ASM4M:"Media Arts",AWM4M:"Visual Arts",EWC4U:"The Writer\'s Craft"};
 var tabs=document.getElementById("tabs"),view=document.getElementById("view"),cur=-1;
 function el(t,a,h){var e=document.createElement(t);for(var k in a||{})e.setAttribute(k,a[k]);if(h!=null)e.innerHTML=h;return e}
 function show(i,ci){
@@ -132,12 +134,65 @@ function show(i,ci){
  view.innerHTML=i<0?map():branch(C[i],ci||0);
  window.scrollTo(0,0);
 }
+function plan(t){
+ return '<div class="card"><h2>How the 30 credits are allocated</h2><p style="margin:0 0 8px">Planned: <b>'+t+' credits</b> over four years (8 per year). You need <b>30</b> (18 compulsory + 12 optional), so <b>'+(t-30)+' are spare</b>. You also need 40 hours of community involvement and the provincial literacy requirement.</p><ul class="pl">'+
+ '<li><b>Front-load the required courses.</b> French, Arts, Phys Ed, Geography, History, Civics and Career Studies are all done in Grades 9-10, so Grades 11-12 are almost all focus 4U/4M courses.</li>'+
+ '<li><b>Grade 12 is built around your best six.</b> Focus 4U/4M courses come first. The last 2-3 optional credits are backups: an extra 4U (for example MDM4U or SPH4U) can replace a weaker mark in your top six, or you can drop them for a spare period.</li>'+
+ '<li><b>Required and optional courses only need a solid pass.</b> They are not in your admission average, so spend your effort on the focus courses. Aim for about 70%+ (a pass is 50%) so you keep prerequisites and confidence. The exception is a Grade 12 backup 4U/4M course, where 80%+ is worth it because it can replace a weaker top-six mark.</li>'+
+ '<li><b>Optional credits do two jobs.</b> Some keep doors open (extra sciences, computing, business). Others (Drama, Music, Phys Ed) earn high marks with lighter workload in heavy semesters.</li>'+
+ '<li><b>Balance every semester.</b> Pair at most two demanding courses (for example Calculus and Chemistry) with a lighter one.</li>'+
+ '<li><b>Group requirements.</b> Three of your credits must come from set groups (English/French/social science, Arts/Phys Ed/Business, and Science/Tech/Computer Studies in Grade 11-12). The optional picks cover them, and your guidance counsellor can confirm.</li>'+
+ '<li><b>Co-op.</b> Co-operative Education credits count as optional credits and add real work experience.</li></ul></div>';
+}
+function tips(){
+ return '<div class="card"><h2>Why the target scores rise, and how to reach them</h2>'+
+ '<div class="lg"><div class="g"><h3>Grades 9-10 (80-85%)</h3>These marks are not in your admission average. They need to be high enough to enter Grade 11 university-prep courses and to build solid foundations.</div>'+
+ '<div class="g"><h3>Grade 11 (about 90%)</h3>Used for early conditional offers, and these courses are the prerequisites for Grade 12.</div>'+
+ '<div class="g"><h3>Grade 12 (about 94%)</h3>These marks make up the average that top programs compare. Competitive Computer Science and Engineering admits often sit in the mid-90s.</div></div>'+
+ '<p class="note">The ramp is a guide, not a prediction. Courses get harder each year, so marks tend to slip. For a specific school, use its published admission average instead of these estimates.</p>'+
+ '<h3 style="margin:14px 0 4px;font-size:15px">How to hit these scores</h3><ul class="pl">'+
+ '<li><b>Fix math gaps early.</b> Math builds on itself, so weak Grade 9-10 topics (algebra, factoring, exponents) come back in MCR3U and MHF4U. Khan Academy and the free University of Waterloo CEMC materials help.</li>'+
+ '<li><b>Know how marks are earned.</b> Roughly 70% of an Ontario course mark comes from work during the term and 30% from the final assessment. Steady tests, assignments and quizzes matter more than one big exam.</li>'+
+ '<li><b>Practise, do not just reread.</b> Do problems and past tests. Keep an error log of every question missed and why, and redo those a week later.</li>'+
+ '<li><b>Go to the teacher early.</b> Ask about any test under about 85% within a few days, before the next unit starts.</li>'+
+ '<li><b>Protect the focus courses.</b> Take lighter electives in the same semester as demanding ones, and keep the Grade 12 spare period for study.</li>'+
+ '<li><b>Work steadily.</b> A little each day beats cramming, and sleep helps a lot.</li></ul>'+
+ '<p class="note">If a target looks out of reach, there are other routes: a college diploma with transfer to a university, or a program at another university with a lower admission average.</p></div>';
+}
+function outside(){
+ return '<div class="card"><h2>Using outside credits and activities</h2>'+
+ '<p style="margin:0 0 8px">Credits earned outside the school timetable can replace optional courses (never the compulsory ones), which frees periods for the focus courses. Only Grade 9 and later counts.</p>'+
+ '<div class="lg"><div class="g"><h3>Tamil (International Languages)</h3>Saturday credit courses for Grades 9-12. A three-level sequence could give up to <b>3 credits</b>. The top level is Grade 12 university prep, so it can also be one of your best six.</div>'+
+ '<div class="g"><h3>Cadets (Cadet Co-op)</h3>Grades 11-12 only, up to <b>4 credits</b> in total at one credit per 90 hours. These are optional co-op credits, not part of the admission average.</div>'+
+ '<div class="g"><h3>Fine arts studio (dance)</h3>Ask for the ministry course code, grade level and whether it appears on the Ontario Student Transcript. An Arts credit could cover the compulsory Arts credit. <b>Confirm before planning.</b></div>'+
+ '<div class="g"><h3>Chess, tennis, soccer, swimming</h3>No credit normally. They still help: coaching or running a club can count toward the 40 community hours, and awards and leadership feed supplementary applications.</div></div>'+
+ '<h3 style="margin:14px 0 4px;font-size:15px">Sample plan if Tamil (3) and Cadets (4) are confirmed</h3>'+
+ '<table class="tb"><tr><th>Grade</th><th>Outside credits</th><th>School optional slots freed</th></tr>'+
+ '<tr><td>9</td><td>Tamil level 1</td><td>1</td></tr>'+
+ '<tr><td>10</td><td>Tamil level 2</td><td>1</td></tr>'+
+ '<tr><td>11</td><td>Tamil level 3 + Cadet Co-op (2)</td><td>3</td></tr>'+
+ '<tr><td>12</td><td>Cadet Co-op (2)</td><td>2</td></tr>'+
+ '<tr><td><b>Total</b></td><td><b>7 credits</b></td><td><b>7 of the 12 optional credits</b></td></tr></table>'+
+ '<p class="note">Result: you still need at least 5 optional courses at school, and the school timetable drops from 8 to about 6 courses a year. Use freed periods for study or a lighter semester around the demanding 4U courses. Cost: Saturday mornings and cadet hours. Confirm each credit, its level structure and timing with your school counsellor, PDSB and the cadet corps before building the timetable around it.</p></div>';
+}
+function programs(){
+ var R=[
+ ["Regular","Yes, MHF4U","Any student at the home school","Flexible timetable with room for outside credits and electives. Least enrichment."],
+ ["Enhanced (ELP)","Yes, same Ontario code, taught with extra depth","Students identified as gifted (through the school IPRC or psycho-educational testing). At The Woodlands there is no application: identified students can enrol. Self-contained classes, Grades 9-12.","Classes of like-minded peers, with proofs and problem-solving emphasised. Marks are still graded on Ontario curriculum expectations. Outcome statistics are the school own claims. Not available without identification."],
+ ["AP","Yes, same Ontario code (AP-level content on top)","Regional Learning Choices application for Grade 9 entry. Offered at Central Peel SS and John Fraser SS.","Extra depth and optional AP exams. Course choices can be tightly set. Woodlands also proctors self-study AP exams in 30+ subjects."],
+ ["IB","No. IB math replaces it in Grades 11-12","Regional Learning Choices application. Pre-IB in Grades 9-10, IB Diploma in Grades 11-12. Extra entry point at Grade 11.","University-level depth and possible advanced credit. Six subjects plus theory of knowledge, extended essay and service hours. For engineering or computer science choose Math AA (HL), not AI. Ask which Ontario credits appear on the transcript."]
+ ];
+ var t='<div class="card"><h2>Regular vs Enhanced vs AP vs IB</h2><p style="margin:0 0 8px">Do you study the same MHF4U? Yes in Regular, Enhanced and AP. In IB you study IB math instead.</p><div style="overflow-x:auto"><table class="tb"><tr><th>Program</th><th>Same MHF4U?</th><th>How you get in</th><th>Upside and watch-outs</th></tr>';
+ R.forEach(function(r){t+='<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td></tr>'});
+ return t+'</table></div><p class="note">Universities see your marks, and Ontario universities generally do not add extra weight for AP or enhanced courses. A harder program only helps if you can keep marks near the targets above. If the student is in Grade 8 now, the application window for Grade 9 entry in 2027-28 is the one to watch, so check current deadlines and fees on the PDSB site. Sources: PDSB Regional Learning Choices pages and The Woodlands Enhanced Learning Program page.</p></div>';
+}
 function legend(){
  return '<div class="card"><h2>How to read a course code</h2><div class="ex"><span class="code">MHF4U</span> = <b>MHF</b> Advanced Functions (Math) + <b>4</b> Grade 12 + <b>U</b> university prep</div>'+
  '<div class="lg"><div class="g"><h3>1. Subject (3 letters)</h3>ENG = English<br>MHF = Math, Advanced Functions<br>SBI = Biology, SCH = Chemistry, SPH = Physics</div>'+
  '<div class="g"><h3>2. Grade (number)</h3>1 = Grade 9<br>2 = Grade 10<br>3 = Grade 11<br>4 = Grade 12</div>'+
- '<div class="g"><h3>3. Type (last letter)</h3><b>U</b> University prep<br><b>M</b> University/College prep<br><b>C</b> College prep<br><b>O</b> Open (any student)<br><b>W</b> Grade 9 mixed (de-streamed)<br><b>D</b> Grade 9-10 Academic</div>'+
+ '<div class="g"><h3>3. Type (last letter)</h3><b>U</b> University prep<br><b>M</b> University/College prep<br><b>C</b> College prep<br><b>O</b> Open (any student)<br><b>W</b> Grade 9 mixed (de-streamed)<br><b>D</b> Academic (Grade 9-10)<br><b>P</b> Applied (Grade 9-10)<br><b>E</b> Workplace prep</div>'+
  '<div class="g"><h3>Why 4U / 4M matter</h3>Universities calculate your admission average from your best <b>6</b> Grade 12 courses of type U or M, and those must include ENG4U plus your program\'s prerequisites.<br><br><b>Example (Engineering applicant):</b><br>ENG4U 92, MHF4U 95, MCV4U 94, SPH4U 93, SCH4U 91, ICS4U 96<br>Total 561 \u00f7 6 = <b>93.5%</b><br>A 7th course, e.g. AWM4M at 82, is left out because it is not in the best six.</div>'+
+ '<div class="g"><h3>Is there MHF4M, MHF4C or MHF4O?</h3>No. Each course exists in only one or two types. Advanced Functions is only <b>MHF4U</b>.<br>Grade 12 math: MHF4U, MCV4U, MDM4U (university), MCT4C, MAP4C (college), MEL4E (workplace).<br>Grade 11 math: MCR3U (university), MCF3M (university/college), MBF3C (college), MEL3E (workplace).</div>'+
  '<div class="g"><h3>OSSD</h3>Ontario Secondary School Diploma: <b>30 credits</b> (18 compulsory + 12 optional) and the diploma you need to apply anywhere.</div></div></div>';
 }
 function map(){
@@ -150,7 +205,7 @@ function map(){
   h+='<path d="M350 250C420 250 410 '+(y+26)+' 470 '+(y+26)+'" fill="none" stroke="'+c.c+'" stroke-width="2.5"/>';
   h+='<g class="node" data-i="'+i+'" tabindex="0"><rect x="470" y="'+y+'" width="340" height="52" rx="10" fill="'+c.c+'"/><text x="486" y="'+(y+22)+'" style="fill:#fff;font-weight:700;font-size:15px">'+c.n+'</text><text x="486" y="'+(y+40)+'" style="fill:#fff;opacity:.9;font-size:12px">'+c.sub+'</text></g>';
  });
- return h+'</svg><p class="note">Select a branch to see routes, licences and the courses to take each year.</p></div>'+legend();
+ return h+'</svg><p class="note">Select a branch to see routes, licences and the courses to take each year.</p></div>'+tips()+outside()+programs()+legend();
 }
 function branch(c,ci){
  var n=c.car.length,H=n*52+16,h='<div style="--c:'+c.c+'"><div class="card"><h2>'+c.n+'</h2><svg viewBox="0 0 700 '+H+'" role="img" aria-label="'+c.n+' careers">';
@@ -166,8 +221,12 @@ function branch(c,ci){
  h+='<div class="card"><h2>Route: '+k.n+'</h2><div class="chain"><div class="step"><b>High school</b><span>OSSD + Grade 12 university-prep courses (4U/4M, see legend below)</span><i>Grades 9-12</i></div>';
  k.r.forEach(function(s){h+='<div class="step"><b>'+s[0]+'</b><span>'+s[1]+'</span><i>'+s[2]+'</i></div>'});
  h+='</div></div><div class="card"><h2>Courses to take, by grade</h2><div class="grid">';
- [9,10,11,12].forEach(function(g){h+='<div class="g"><h3>Grade '+g+' (target '+c.t[g-9]+'%+)</h3>'+c.hs[g].map(function(x){return '<div class="cl"><b>'+K[x]+'</b> ('+x+' \u00b7 '+c.t[g-9]+'%+)</div>'}).join("")+'</div>'});
- return h+'</div><p class="note">'+c.tip+' Targets are approximate competitive averages for top schools (e.g. UofT, Waterloo, McMaster, Queen\'s, UBC, McGill, Western) and change every year. Grade 9-10 marks are not normally in admission averages, but they decide whether you can enter the 4U courses.</p></div>'+legend()+'</div>';
+ var F={9:["CGC1W","FSF1D","PPL1O","AVI1O"],10:["CHC2D","GLC2O","CHV2O"],11:[],12:[]},ttl=0;
+ var cr=function(x){return x==="GLC2O"||x==="CHV2O"?0.5:1},sm=function(a){return a.reduce(function(m,x){return m+cr(x)},0)};
+ var ln=function(x,t){return '<div class="cl"><b>'+K[x]+'</b> ('+x+' \u00b7 '+cr(x)+' credit \u00b7 '+t+'%+)</div>'};
+ [9,10,11,12].forEach(function(g){var f=c.hs[g],r=F[g],o=c.o[g],T=c.t[g-9],n=sm(f)+sm(r)+sm(o);ttl+=n;
+  h+='<div class="g"><h3>Grade '+g+' (target '+T+'%+) \u00b7 '+n+' credits</h3><div class="sl">Focus</div>'+f.map(function(x){return ln(x,T)}).join("")+(r.length?'<div class="sl">Required for everyone</div>'+r.map(function(x){return ln(x,(g===12&&/[UM]$/.test(x))?80:70)}).join(""):"")+'<div class="sl">Optional</div>'+o.map(function(x){return ln(x,(g===12&&/[UM]$/.test(x))?80:70)}).join("")+'</div>'});
+ return h+'</div><p class="note">'+c.tip+' Focus-course targets are approximate competitive averages for top schools (e.g. UofT, Waterloo, McMaster, Queen\'s, UBC, McGill, Western) and change every year. Grade 9-10 marks are not normally in admission averages, but they decide whether you can enter the 4U courses.</p></div>'+plan(ttl)+legend()+'</div>';
 }
 tabs.appendChild(el("button",{role:"tab"},"Map"));
 C.forEach(function(c){var b=el("button",{role:"tab"},c.n);b.style.setProperty("--c",c.c);tabs.appendChild(b)});
